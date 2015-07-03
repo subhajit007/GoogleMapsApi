@@ -1,3 +1,5 @@
+
+<marquee>Welcome to Subhajit's <strong>World Wonders! </strong> First click the location you want to visit, then drag that yellow little guy from left to your location. Refresh the page and visit another wonder. Enjoy...</marquee>
 <style type="text/css">
 
 	html, body, #map-canvas{
@@ -5,6 +7,12 @@
 		margin: 0;
 		padding: 0;
 	}
+	marquee{
+		color:#400000 ;
+
+
+	}
+
 
 </style>
 
@@ -14,34 +22,114 @@
 // This is what initializes the Google maps into my app
 	function initialize(){
 
-		var sanJose = new google.maps.LatLng(37.339085, -121.8914807);
-		var eiffelTower = new google.maps.LatLng(48.85837, 2.294481);
+		// var sanJose = new google.maps.LatLng(37.339085, -121.8914807);
+		var tajMahal = new google.maps.LatLng(27.1750, 78.0419);
+		var christ = new google.maps.LatLng(-22.95158, -43.210482);
+		var gizaPyramid = new google.maps.LatLng(29.9792, 31.1344);
+		var chinaWall = new google.maps.LatLng(40.6769, 117.2319);
+		var jordanPetra = new google.maps.LatLng(30.3286, 35.4419);
+		var colRome = new google.maps.LatLng(41.8902, 12.4923);
+		var chiItza = new google.maps.LatLng(20.678392, -88.571568);
+		var machuPichu = new google.maps.LatLng(-13.163697, -72.545981);
+
 
 		var marker = new google.maps.Marker({
-			position: sanJose,
-			title: "Hello world!",
+			position: tajMahal,
+			title: "Taj Mahal a Royal Love from India!",
 			animation: google.maps.Animation.DROP,
 			draggable: true,
 		});
-
 		// This will make our marker bounce up and down on click
 		google.maps.event.addListener(marker, 'click', function(){
 			marker.setAnimation(google.maps.Animation.BOUNCE);
 		});
+		var two = new google.maps.Marker({
+			position: christ,
+			title: "Christ the Redeemer! Brazil",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(two, 'click', function(){
+			two.setAnimation(google.maps.Animation.BOUNCE);
+		});
+var three = new google.maps.Marker({
+			position: gizaPyramid,
+			title: "Pyramid of Giza",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(three, 'click', function(){
+			three.setAnimation(google.maps.Animation.BOUNCE);
+		});
 
+		var four = new google.maps.Marker({
+			position: chinaWall,
+			title: "Great wall of China",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(four, 'click', function(){
+			four.setAnimation(google.maps.Animation.BOUNCE);
+		});
+
+		var five = new google.maps.Marker({
+			position: jordanPetra,
+			title: "Petra from Jordan",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(five, 'click', function(){
+			five.setAnimation(google.maps.Animation.BOUNCE);
+		});
+
+		var six = new google.maps.Marker({
+			position:colRome ,
+			title: "The Colosseum, Rome",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(six, 'click', function(){
+			six.setAnimation(google.maps.Animation.BOUNCE);
+		});
+
+		var seven = new google.maps.Marker({
+			position: chiItza ,
+			title: "Chichén Itzá",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(seven, 'click', function(){
+			seven.setAnimation(google.maps.Animation.BOUNCE);
+		});
+
+		var eight = new google.maps.Marker({
+			position: machuPichu,
+			title: "Machu Picchu, Peru",
+			animation: google.maps.Animation.DROP,
+			draggable: true,
+});
+		// This will make our marker bounce up and down on click
+		google.maps.event.addListener(eight, 'click', function(){
+			eight.setAnimation(google.maps.Animation.BOUNCE);
+		});
 
 
 
 		// This is going to be the styling for my map
-		 var styles = [{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"},{"color":"#f3f4f4"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"weight":0.9},{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#83cead"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"visibility":"on"},{"color":"#fee379"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#7fc8ed"}]}];
-
+		var styles = [{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"simplified"}]},{"featureType":"transit","stylers":[{"visibility":"simplified"}]},{"featureType":"landscape","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"visibility":"off"}]},{"featureType":"road.local","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"water","stylers":[{"color":"#84afa3"},{"lightness":52}]},{"stylers":[{"saturation":-17},{"gamma":0.36}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#3f518c"}]}];
 	    // This sets the styling for a map
 	    var styledMap = new google.maps.StyledMapType(styles, {name: 'Styled Map'});
 
 		// Gives us predefined options in our map
 		var mapOptions = {
-			center: sanJose,
-			zoom: 8
+			center:tajMahal,
+			zoom: 2
 		};
 		// It creates the map
 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -49,6 +137,13 @@
 		map.mapTypes.set('map_style', styledMap);
 		map.setMapTypeId('map_style');
 		marker.setMap(map);
+		two.setMap(map);
+		three.setMap(map);
+		four.setMap(map);
+		five.setMap(map);
+		six.setMap(map);
+		seven.setMap(map);
+		eight.setMap(map);
 
 	}
 
